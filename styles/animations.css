@@ -12,3 +12,125 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes fly {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    100% {
+      transform: translateX(4px);
+    }
+  }
+
+ @keyframes heart {
+  0% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+ }
+
+ @keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+ }
+
+ .contour {
+  fill: var(--accent-color);
+  transition: fill 0.3s;
+}
+
+.sparks {
+  opacity: 0;
+  fill: var(--heart-gulf);
+}
+
+.core {
+  fill: var(--heart-core);
+  transition: fill 0.3s linear 0.15s;
+}
+
+.main-body {
+  fill: var(--heart-main-body);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.18s;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__icon-button:active .core {
+  fill: var(--heart-gulf);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--heart-gulf);
+  transition: fill 0.3s linear 0.18s;
+}
+
+.is-liked .core {
+  fill: var(--heart-gulf);
+  transition: fill 0.3s linear;
+}
+
+.is-liked .main-body {
+  fill: var(--heart-gulf);
+  transition: fill 0.3s linear 0.18s;
+}
+
+.is-liked .contour {
+  fill: var(--heart-gulf);
+  transition: fill 0.3s linear 0.3s;
+}
+
+.is-liked .heart {
+  animation: heart 0.3s ease-in 0.5s alternate-reverse;
+}
+
+.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.6s alternate-reverse;
+}
+
+.card__like-button::after {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 40px;
+  background-color: var(--accent-background-button);
+  transition: width 0.5s ease-in-out;
+}
+
+.card__like-button:hover::after {
+  width: 100%;
+}
+
+.button__text {
+  position: relative;
+  color: var(--accent-color-button);
+  mix-blend-mode: difference;
+  z-index: 2;
+}
