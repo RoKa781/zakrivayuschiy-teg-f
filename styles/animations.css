@@ -14,16 +14,16 @@
 */
 
 @keyframes fly {
-    0% {
-      transform: translateX(0px);
-    }
-  
-    100% {
-      transform: translateX(4px);
-    }
+  0% {
+    transform: translateX(0px);
   }
 
- @keyframes heart {
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes heart {
   0% {
     transform: scale(1);
     transform-origin: center;
@@ -33,9 +33,9 @@
     transform: scale(1.5);
     transform-origin: center;
   }
- }
+}
 
- @keyframes sparks {
+@keyframes sparks {
   0% {
     opacity: 0;
   }
@@ -43,9 +43,9 @@
   100% {
     opacity: 1;
   }
- }
+}
 
- .contour {
+.contour {
   fill: var(--accent-color);
   transition: fill 0.3s;
 }
