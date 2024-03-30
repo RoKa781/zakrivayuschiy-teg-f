@@ -29,11 +29,6 @@
   font-variation-settings: "wdth" var(--weight-text);
 }
 
-@supports (font-variation-settings: normal) {
-  .page {
-    font-variation-settings: "wdth" var(--weight-text);
-  }
-}
 
 .header {
   display: flex;
@@ -156,7 +151,7 @@
   color: var(--accent-color);
   font-family: var(--general-font);
   font-size: 18px;
-  font-weight: var(--weight-title);
+  font-variation-settings: "wght" var(--weight-title);
   line-height: 22px;
   text-align: left;
   background-color: var(--background-color);
