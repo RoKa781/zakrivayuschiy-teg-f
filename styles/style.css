@@ -19,7 +19,7 @@
   max-inline-size: 1440px;
   min-block-size: 100dvb;
   font-family: var(--general-font);
-  font-variation-settings: var(--weight-text);
+  font-variation-settings: "wdth" var(--weight-text);
   background-color: var(--background-color);
   background-image: var(--background-image);
   color: var(--accent-color);
@@ -369,6 +369,11 @@
   transition: box-shadow 0.3s ease;
 }
 
+.dialog__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .image-1 {
   filter: saturate(25%);
 }
@@ -424,4 +429,3 @@ max-width: 700px;
   height: 21px;
 }
 }
-
