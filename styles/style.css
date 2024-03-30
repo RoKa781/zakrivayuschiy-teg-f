@@ -26,6 +26,7 @@
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  font-variation-settings: "wdth" var(--weight-text);
 }
 
 @supports (font-variation-settings: normal) {
