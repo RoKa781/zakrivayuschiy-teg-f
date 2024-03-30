@@ -26,7 +26,12 @@
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  font-variation-settings: "wdth" var(--weight-text, 400);
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-variation-settings: "wdth" var(--weight-text);
+  }
 }
 
 .header {
@@ -156,7 +161,8 @@
   background-color: var(--background-color);
   padding: 4px 10px 3px;
   border-bottom: 2px solid var(--accent-color);
-  transition: color 0.5s ease, background-color 0.5s ease, font-weight 0.5s ease, border 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease, font-weight 0.5s ease,
+    border 0.5s ease;
 }
 
 .section__card-conteiner {
@@ -178,7 +184,8 @@
   mix-blend-mode: hard-light;
   text-shadow: -1px 0 var(--label), 0 1px var(--label), 1px 0 var(--label),
     0 -1px rgba(255, 255, 255, 0.5);
-  transition: color 0.5s ease, text-shadow 0.5s ease, -webkit-text-stroke 0.5s ease;
+  transition: color 0.5s ease, text-shadow 0.5s ease,
+    -webkit-text-stroke 0.5s ease;
 }
 
 @supports (
@@ -408,8 +415,8 @@ dialog::backdrop {
 
 @media (width >=376px) {
   .page {
- margin: 0 auto;
-max-width: 700px;
+    margin: 0 auto;
+    max-width: 700px;
   }
 
   .theme-menu {
@@ -426,11 +433,11 @@ max-width: 700px;
     width: 335px;
     height: 55px;
   }
-.footer__text {
-  padding-bottom: 0px;
-}
-.floppy {
-  width: 21px;
-  height: 21px;
-}
+  .footer__text {
+    padding-bottom: 0px;
+  }
+  .floppy {
+    width: 21px;
+    height: 21px;
+  }
 }
